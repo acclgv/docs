@@ -81,6 +81,8 @@
     "zod": "^4.4.3"
   },
   "devDependencies": {
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.12",
     "@hanzo/docs-cli": "workspace:*",
     "@hanzo/products": "^0.2.0",
     "@next/bundle-analyzer": "16.2.12",

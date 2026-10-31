@@ -1,5 +1,5 @@
 import { Docs } from '@/components/layouts/docs';
-import { HanzoPreFooterCTA } from '@hanzogui/shell';
+import { PreFooterCTA } from '@/components/pre-footer-cta';
 import { Footer } from '@/components/footer';
 
 // The landing page carries the SAME chrome as /docs — page tree, sidebar
@@ -37,7 +37,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
           {children}
         </Docs>
       </div>
-      <HanzoPreFooterCTA surface="hanzo.ai" />
+      <PreFooterCTA surface="hanzo.ai" />
       <Footer />
     </>
   );

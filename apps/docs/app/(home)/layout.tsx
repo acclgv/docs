@@ -1,7 +1,7 @@
 import { HomeLayout } from '@hanzo/docs-base-ui/layouts/home';
 import { baseOptions, linkItems } from '@/components/layouts/shared';
 import { MeetHanzo } from '@/components/meet-hanzo';
-import { HanzoPreFooterCTA } from '@hanzogui/shell';
+import { PreFooterCTA } from '@/components/pre-footer-cta';
 import { Footer } from '@/components/footer';
 
 export default function Layout({ children }: LayoutProps<'/'>) {
@@ -34,7 +34,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       >
         {children}
       </HomeLayout>
-      <HanzoPreFooterCTA surface="hanzo.ai" />
+      <PreFooterCTA surface="hanzo.ai" />
       <Footer />
     </>
   );

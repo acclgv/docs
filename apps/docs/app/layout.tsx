@@ -41,17 +41,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <Body>
         <NextProvider>
           <TreeContextProvider tree={source.getPageTree()}>
-            <Provider paths={translatedPathnames()}>{children}</Provider>
+            <Provider paths={translatedPathnames()}>
+              {children}
+              <Analytics product="docs" />
+              {/*
+                Help and appearance, bottom-right — the same corner control hanzo.ai
+                carries. The Hanzo Edit launcher used to hold this corner; it is an
+                authoring tool on a published page, and hanzo.ai dropped it for the
+                same reason. A reader of the docs edits them in the repo.
+              */}
+              <AppearanceDock />
+            </Provider>
           </TreeContextProvider>
         </NextProvider>
-        <Analytics product="docs" />
-        {/*
-          Help and appearance, bottom-right — the same corner control hanzo.ai
-          carries. The Hanzo Edit launcher used to hold this corner; it is an
-          authoring tool on a published page, and hanzo.ai dropped it for the
-          same reason. A reader of the docs edits them in the repo.
-        */}
-        <AppearanceDock />
       </Body>
     </html>
   );

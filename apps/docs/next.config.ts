@@ -246,6 +246,7 @@ const config: NextConfig = {
     // compile it for the client/server split and the JSX runtime to resolve,
     // the same reason the shell above is listed.
     '@hanzo/ui',
+    '@hanzo/gui',
   ],
   serverExternalPackages: [
     'ts-morph',

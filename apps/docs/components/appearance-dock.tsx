@@ -14,7 +14,18 @@
  */
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { useTheme } from 'next-themes';
-import { HanzoMark } from '@hanzogui/shell';
+const HanzoMark = ({ size = 20 }: { size?: number }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 20 20"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-label="Hanzo"
+  >
+    <path d="M2.5 2.5h3v6.25h9V2.5h3v15h-3V11.25h-9V17.5h-3z" />
+  </svg>
+);
 
 /** Where a reader goes when the page is not enough. Real destinations only. */
 const HELP = [
